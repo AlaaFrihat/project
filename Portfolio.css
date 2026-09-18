@@ -422,6 +422,7 @@ font-size: 40px;
   border-radius: 16px;
   padding: 24px;
   max-width: 550px;
+  
 }
 
 .para-soft:hover {
@@ -552,8 +553,28 @@ font-size: 40px;
   transform: scale(0.9);
 }
 
-@media(max-width:1024px) {
-  .po-grid { flex-direction: column; }
+/* ==========================================
+   الميديا كويري المعدلة لشاشات الشاشات المختلفة
+   ========================================== */
+
+/* للشاشات المتوسطة والتابلت (أقل من 1024px) */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 60px 20px;
+  }
+
+  .main3, 
+  .ref-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .po-grid { 
+    flex-direction: column; 
+  }
+
   .Image-me {
     width: 280px;
     height: 300px;
@@ -561,20 +582,131 @@ font-size: 40px;
     object-fit: cover;
   }
 }
-@media(max-width:450px) {
-  .po-grid { flex-direction: column; }
+
+/* للشاشات الصغيرة والموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 220px;
+    margin-bottom: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .main2, .main3 {
+    padding: 25px 15px;
+    margin-top: 30px;
+  }
+
+  
+
+  .ref-container {
+    padding: 20px 10px;
+  }
+
+  .ref-box {
+    width: 100%;
+    height: auto;
+    padding: 25px 15px;
+  }
+  
+
+  .main-container,
+  .main2,
+  .main3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. تجاوب البطاقات الداخلية وإلغاء الارتفاع والعرض الثابت */
+  .grid-2columns {
+    grid-template-columns: 1fr !important; /* تحويل الشبكة لعمود واحد */
+  }
+
+  .box, 
+  .box2, 
+  .box3, 
+  .card-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; /* إلغاء الارتفاع الثابت مثل 200px */
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+}
+
+
+
+@media (max-width: 450px) {
+  .hero-left h1 {
+    font-size: 24px;
+  }
+
+  .sec-title, .sec-title2, .sec-title3, .References h1, .tag-blue1, .tag-yellow, .tag-info {
+    font-size: 24px;
+  }
+
+  .sec-text {
+    font-size: 1rem;
+  }
+
   .Image-me2, .Image-me3, .Image-me4 {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
   }
-  .box .small { font-size: 100px; }
+
   .Image-orange {
-    width: 90px;
-    height: 90px;
-    border-radius: 10px;
-    object-fit: cover;
+    width: 80px;
+    height: 80px;
   }
-  .or-title { font-size: 0.80rem; }
+
+  .or-title { 
+    font-size: 0.9rem; 
+  }
+}
+@media (max-width:300px) {
+  .hero-left h1 {
+    font-size: 24px;
+  }
+
+  .sec-title, .sec-title2, .sec-title3, .References h1, .tag-blue1, .tag-yellow, .tag-info {
+    font-size: 24px;
+  }
+
+  .sec-text {
+    font-size: 1rem;
+  }
+
+  .Image-me2, .Image-me3, .Image-me4 {
+    width: 100%;
+    height: auto;
+  }
+
+  .Image-orange {
+    width: 80px;
+    height: 80px;
+  }
+
+  .or-title { 
+    font-size: 0.9rem; 
+  }
+
 }
