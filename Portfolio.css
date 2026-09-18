@@ -553,11 +553,7 @@ font-size: 40px;
   transform: scale(0.9);
 }
 
-/* ==========================================
-   الميديا كويري المعدلة لشاشات الشاشات المختلفة
-   ========================================== */
 
-/* للشاشات المتوسطة والتابلت (أقل من 1024px) */
 @media (max-width: 1024px) {
   .hero-container {
     padding: 60px 20px;
@@ -583,7 +579,7 @@ font-size: 40px;
   }
 }
 
-/* للشاشات الصغيرة والموبايل (أقل من 768px) */
+
 @media (max-width: 768px) {
   *, *::before, *::after {
     box-sizing: border-box;
@@ -636,10 +632,9 @@ font-size: 40px;
     box-sizing: border-box !important;
   }
 
-  /* 2. تجاوب البطاقات الداخلية وإلغاء الارتفاع والعرض الثابت */
+  
   .grid-2columns {
-    grid-template-columns: 1fr !important; /* تحويل الشبكة لعمود واحد */
-  }
+    grid-template-columns: 1fr !important; 
 
   .box, 
   .box2, 
@@ -647,10 +642,11 @@ font-size: 40px;
   .card-item {
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important; /* إلغاء الارتفاع الثابت مثل 200px */
+    height: auto !important;
     box-sizing: border-box !important;
     margin: 10px 0 !important;
   }
+}
 }
 
 
